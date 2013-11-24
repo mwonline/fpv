@@ -1,0 +1,7 @@
+.nivo-controlNav { position:absolute; left:47%; top:333px; }
+.nivo-controlNav a { display:block; width:12px; height:12px; top: -12px; background:url(bullets.png) no-repeat; text-indent:-9999px; border:0; margin-right:3px; float:left; }
+.nivo-controlNav a.active { background-position:-12px 0; }
+.nivo-directionNav {z-index:200;}
+.nivo-directionNav a { display:block; width:16px; height:25px; background:url(arrows.png) no-repeat; text-indent:-9999px; border:0; }
+a.nivo-nextNav { background-position:-16px 0; left:570px; top:212px;}
+a.nivo-prevNav { left:15px;top:212px; }

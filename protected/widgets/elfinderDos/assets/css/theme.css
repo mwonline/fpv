@@ -1,0 +1,49 @@
+/**
+ * MacOS X like theme for elfinderDos.
+ * Required jquery ui "smoothness" theme.
+ *
+ * @author Dmitry (dio) Levashov
+ **/
+
+/* dialogs */
+.std42-dialog, .std42-dialog .ui-widget-content { background-color:#ededed; background-image:none; }
+
+/* navbar */
+.elfinderDos .elfinderDos-navbar { background:#dde4eb; }
+.elfinderDos-navbar .ui-state-hover  { background:transparent; border-color:transparent; }
+.elfinderDos-navbar .ui-state-active { background: #3875d7;    border-color:#3875d7; color:#fff; }
+/* disabled elfinderDos */
+.elfinderDos-disabled .elfinderDos-navbar .ui-state-active { background: #dadada; border-color:#aaa; color:#fff; }
+
+
+/* current directory */
+/* selected file in "icons" view */
+.elfinderDos-cwd-view-icons .elfinderDos-cwd-file .ui-state-hover { background:#ccc; }
+/* list view*/
+.elfinderDos-cwd table tr:nth-child(odd) { background-color:#edf3fe; }
+.elfinderDos-cwd table tr { border-top:1px solid #fff; }
+
+/* common selected background/color */
+.elfinderDos-cwd-view-icons .elfinderDos-cwd-file .elfinderDos-cwd-filename.ui-state-hover,
+.elfinderDos-cwd table td.ui-state-hover,
+.elfinderDos-button-menu .ui-state-hover { background: #3875d7; color:#fff;}
+/* disabled elfinderDos */
+.elfinderDos-disabled .elfinderDos-cwd-view-icons .elfinderDos-cwd-file .elfinderDos-cwd-filename.ui-state-hover,
+.elfinderDos-disabled .elfinderDos-cwd table td.ui-state-hover { background:#dadada;}
+
+/* statusbar */
+.elfinderDos .elfinderDos-statusbar { color:#555; }
+.elfinderDos .elfinderDos-statusbar a { text-decoration:none; color:#555;}
+
+
+.std42-dialog .elfinderDos-help, .std42-dialog .elfinderDos-help .ui-widget-content { background:#fff;}
+
+/* contextmenu */
+.elfinderDos-contextmenu .ui-state-hover { background: #3875d7; color:#fff; }
+.elfinderDos-contextmenu .ui-state-hover .elfinderDos-contextmenu-arrow { background-image:url('../img/arrows-active.png'); }
+
+
+
+
+
+

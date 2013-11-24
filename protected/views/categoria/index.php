@@ -1,0 +1,20 @@
+<?php
+/* @var $this CategoriaControllerController */
+/* @var $dataProvider CActiveDataProvider */
+
+$this->breadcrumbs=array(
+	'Categorias',
+);
+
+$this->menu=array(
+	array('label'=>'Crear Categoria', 'url'=>array('create')),
+	array('label'=>'Administrar Categoria', 'url'=>array('admin')),
+);
+?>
+
+<h1>Categor&iacute;as</h1>
+
+<?php $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_view',
+)); ?>

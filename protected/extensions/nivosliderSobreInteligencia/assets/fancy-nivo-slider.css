@@ -1,0 +1,17 @@
+.nivo-controlNav { position:absolute; left:47%; }
+#pequenio .nivo-controlNav {     
+    left: 35%;
+    position: absolute;
+    right: 50%;
+    text-align: center;
+    width: 75px; 
+}
+.nivo-controlNav a { display:block; width:12px; height:12px; top: -12px; background:url(bullets.png) no-repeat; text-indent:-9999px; border:0; margin-right:3px; float:left; }
+.nivo-controlNav a.active { background-position:-12px 0; }
+.nivo-directionNav {z-index:200;}
+.nivo-directionNav a { display:block; width:55px; height:54px; background:url(arrows.png) no-repeat; text-indent:-9999px; border:0; }
+a.nivo-nextNav { background-position:-55px 0; left:922px; top:128px;}
+a.nivo-prevNav { left:-18px;top:128px; }
+#pequenio a.nivo-nextNav { background-position:-55px 0; left:922px; top:128px; display: none}
+#pequenio a.nivo-prevNav { left:40px;top:25%; display: none}
+#galeriaSobre a.nivo-nextNav { background-position:-55px 0; left:623px; top:128px;}
