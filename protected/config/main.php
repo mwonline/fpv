@@ -54,12 +54,11 @@ return array(
             'allowAutoLogin' => true,
         ),
         // uncomment the following to enable URLs in path-format
-
         'urlManager' => array(
             'urlFormat' => 'path',
             'rules' => array(
                 '<controller:\w+>/<alias:\d+>' => '<controller>/view',
-                '<controller:\w+>/<action:\w+>/<alias:\w+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>/<alias:\w+>/*' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ),
             'showScriptName' => false,

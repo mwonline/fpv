@@ -72,14 +72,14 @@ function getDia($fecha) {
             <div class="nav-notas">
                 <div class="anterior">
                     <?php if ($this->arrayNextPrev[1] != "") { ?>
-                        <a href="<?php echo Yii::app()->createUrl('index/categoria/blog_interna?idBlog=' . $this->arrayNextPrev[1]); ?>">
+                        <a href="<?php echo Yii::app()->createUrl("index/categoria",array("alias"=>"blog",'interna'=>$this->arrayNextPrev[1]));?>">
                             <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/prev.png" width="179" height="24" alt="Anterior"></a>
                     <?php } ?>
 
 
                 </div>
                 <div class="siguiente"><?php if ($this->arrayNextPrev[2] != "") { ?>
-                        <a href="<?php echo Yii::app()->createUrl('index/categoria/blog_interna?idBlog=' . $this->arrayNextPrev[2]); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/next.png" width="182" height="24" alt="Siguiente"></a>
+                        <a href="<?php echo Yii::app()->createUrl("index/categoria",array("alias"=>"blog",'interna'=>$this->arrayNextPrev[2]));?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/next.png" width="182" height="24" alt="Siguiente"></a>
                     <?php } ?>
                 </div>
             </div>

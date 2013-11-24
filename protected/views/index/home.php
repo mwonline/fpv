@@ -94,8 +94,8 @@ function getDia($fecha) {
                             </div>
                         </div>
                         <div class="right">
-                            <div class="titulo"><a href="<?php echo Yii::app()->createUrl('index/categoria', array('alias' => 'blog_interna', 'idBlog' => $value->idContenido)) ?>"><?php echo $value->titulo; ?></a></div>
-                            <div class="texto"><?php echo $value->resumen; ?><span class="mas"><a href="<?php echo Yii::app()->createUrl('index/categoria', array('alias' => 'blog_interna', 'idBlog' => $value->idContenido)) ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-red.png" width="17" height="13" alt="mas"></a></span></div>
+                            <div class="titulo"><a href="<?php echo Yii::app()->createUrl('index/categoria', array('alias' => 'blog', 'interna' => $value->alias)) ?>"><?php echo $value->titulo; ?></a></div>
+                            <div class="texto"><?php echo $value->resumen; ?><span class="mas"><a href="<?php echo Yii::app()->createUrl('index/categoria', array('alias' => 'blog', 'interna' => $value->alias)) ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-red.png" width="17" height="13" alt="mas"></a></span></div>
                         </div>
                     </div><!--fin post -->
                 <?php } ?>

@@ -165,9 +165,12 @@ class IndexController extends Controller {
     }
 
     //alias es el parametro de entrada por la url que pude ser 'calle'
-    public function actionCategoria($alias) {
+    public function actionCategoria($alias=null, $interna=null) {
         //echo "alias".$alias;
+
         //obtener todos los datos de la categorias
+        if($interna!=null)
+            $alias='blog_interna';
         $modelCategoria = Categoria::model()->findAll("alias='" . $alias . "'");
 
         //tomar el elemento 0 y dejarlo en un objeto.
@@ -188,7 +191,7 @@ class IndexController extends Controller {
         //print_r($modelCategoria); 
 
         if ($alias == 'blog_interna')
-            $this->getBlogInterna($modelCategoria);
+            $this->getBlogInterna($modelCategoria,$interna);
         else {
             //obtener la plantilla para esta categoria
             $this->getPlantilla($modelCategoria);
@@ -775,8 +778,8 @@ class IndexController extends Controller {
         return $mes_r;
     }
 
-    private function getBlogInterna($modelCategoria) {
-        $idContenido = $_REQUEST['idBlog'];
+    private function getBlogInterna($modelCategoria, $idBlog) {
+        $idContenido = $idBlog;
         //retorna un arreglo de un elemento que contiene un solo objto
         $categoria = Categoria::model()->findAll('idplantilla=:idplantilla', array(':idplantilla' => 3));
 
@@ -797,12 +800,12 @@ class IndexController extends Controller {
 
             //$arrayNextPrev[0] = $noticias->idContenido;
 
-            if ($noticias->idContenido == $idContenido) {
+            if ($noticias->alias == $idContenido) {
                 $this->arrayNextPrev[0] = $i;
             } elseif ($this->arrayNextPrev[0] == 0) {
-                $this->arrayNextPrev[1] = $noticias->idContenido;
+                $this->arrayNextPrev[1] = $noticias->alias;
             } elseif ($this->arrayNextPrev[0] == ($i - 1)) {
-                $this->arrayNextPrev[2] = $noticias->idContenido;
+                $this->arrayNextPrev[2] = $noticias->alias;
             }
             $i++;
         }

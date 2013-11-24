@@ -74,7 +74,7 @@
                         
 						<div class="post_destacado <?php echo $cls?>">
                         	<!--<div class="foto"><a href="blog_interna?idBlog=<?php echo $conten['idContenido'];?>"><img src="<?php echo Yii::app()->request->baseUrl . "/" . $conten->imagen; ?>" width="282" height="214" alt="blog" /></a></div>-->
-                        	<div class="foto"><a href="blog_interna?idBlog=<?php echo $conten['idContenido'];?>"><img src="<?php echo Yii::app()->request->baseUrl;?>/timthumb.php?src=<?php echo $conten->imagen;?>&h=214&w=282" alt="blog" /></a></div>
+                        	<div class="foto"><a href="<?php echo Yii::app()->createUrl("index/categoria",array("alias"=>"blog",'interna'=>$conten['alias']));?>"><img src="<?php echo Yii::app()->request->baseUrl;?>/timthumb.php?src=<?php echo $conten->imagen;?>&h=214&w=282" alt="blog" /></a></div>
 <div class="left">
                              	   	<div class="fecha">
                                    		<span class="mes"><?php echo getMes($conten['fecha_creacion']);?></span>
@@ -82,8 +82,8 @@
                                 	</div>
                             </div>
 							<div class="right">
-                                    <div class="titulo"><a href="blog_interna?idBlog=<?php echo $conten['idContenido'];?>"><?php echo $conten['titulo'];?></a></div>
-                                    <div class="texto"><?php echo $conten['resumen'];?><span class="mas"><a href="blog_interna?idBlog=<?php echo $conten['idContenido'];?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-red.png" width="17" height="13" alt="mas"></a></span></div>
+                                    <div class="titulo"><a href="<?php echo Yii::app()->createUrl("index/categoria",array("alias"=>"blog",'interna'=>$conten['alias']));?>"><?php echo $conten['titulo'];?></a></div>
+                                    <div class="texto"><?php echo $conten['resumen'];?><span class="mas"><a href="<?php echo Yii::app()->createUrl("index/categoria",array("alias"=>"blog",'interna'=>$conten['alias']));?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-red.png" width="17" height="13" alt="mas"></a></span></div>
                             </div>
                             
                             <div class="tags">
@@ -117,7 +117,7 @@
                          
                         <div class="post_destacado <?php echo $cls;?>" id="destacado_<?php echo $i;?>" <?php if ($i>4)
 						echo "style='display:none;'";?>>
-                        	<div class="foto"> <a href="blog_interna?idBlog=<?php echo $conten['idContenido'];?>"><img src="<?php echo Yii::app()->request->baseUrl . "/" . $conten->imagen; ?>" width="178" height="120" alt="blog"></a></div>
+                        	<div class="foto"> <a href="<?php echo Yii::app()->createUrl("index/categoria",array("alias"=>"blog",'interna'=>$conten['alias']));?>"><img src="<?php echo Yii::app()->request->baseUrl . "/" . $conten->imagen; ?>" width="178" height="120" alt="blog"></a></div>
                             <div class="left">
                              	   	<div class="fecha">
                                    		<span class="mes"><?php echo getMes($conten['fecha_creacion']);?></span>
@@ -125,8 +125,8 @@
                                 	</div>
                           </div>
 							<div class="right">
-                                    <div class="titulo"><a href="blog_interna?idBlog=<?php echo $conten['idContenido'];?>"><?php echo $conten['titulo'];?></a></div>
-                                    <div class="texto"><?php echo $conten['resumen'];?> <span class="mas"><a href="blog_interna?idBlog=<?php echo $conten['idContenido'];?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-red.png" width="17" height="13" alt="mas"></a></span></div>
+                                    <div class="titulo"><a href="<?php echo Yii::app()->createUrl("index/categoria",array("alias"=>"blog",'interna'=>$conten['alias']));?>"><?php echo $conten['titulo'];?></a></div>
+                                    <div class="texto"><?php echo $conten['resumen'];?> <span class="mas"><a href="<?php echo Yii::app()->createUrl("index/categoria",array("alias"=>"blog",'interna'=>$conten['alias']));?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-red.png" width="17" height="13" alt="mas"></a></span></div>
                             </div>
                             
                             <div class="tags">

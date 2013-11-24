@@ -13,7 +13,7 @@
                           </div>
                           
                           <div class="right">
-                              <div class="texto"><a href="blog_interna?idBlog=<?php echo $conten['idContenido'];?>"><?php echo $conten['resumen'];?></a><span class="mas"><a href="blog_interna?idBlog=<?php echo $conten['idContenido'];?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-red.png" width="17" height="13" alt="mas"></a></span></div>
+                              <div class="texto"><a href="<?php echo Yii::app()->createUrl("index/categoria",array("alias"=>"blog",'interna'=>$conten['alias']));?>"><?php echo $conten['resumen'];?></a><span class="mas"><a href="<?php echo Yii::app()->createUrl("index/categoria",array("alias"=>"blog",'interna'=>$conten['alias']));?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-red.png" width="17" height="13" alt="mas"></a></span></div>
                             </div>
                          </div><!-- fin nota -->
                          <?php } ?>
